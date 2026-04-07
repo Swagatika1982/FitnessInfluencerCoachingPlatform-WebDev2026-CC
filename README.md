@@ -55,8 +55,8 @@ The ER diagram includes the following core entities:
 
 ## Key Design Decisions
 
-- A common **User entity is used for shared account details.
-- TrainerProfile and **ClientProfile are separated to avoid mixing role-specific data.
+- A common User entity is used for shared account details.
+- TrainerProfile and ClientProfile are separated to avoid mixing role-specific data.
 - ProgramPlan stores the coaching plans offered by trainers.
 - ClientSubscription tracks which client purchased which plan and for what duration.
 - Session is modeled separately from CheckIn because consultations and weekly reports are different.
