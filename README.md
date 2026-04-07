@@ -22,8 +22,8 @@ The system supports features such as:
 - progress tracking
 - trainer notes and feedback
 
-This is **not a gym management system**.  
-It is an **online coaching ecosystem** where trainers provide fitness support digitally.
+This is not a gym management system.  
+It is an online coaching ecosystem where trainers provide fitness support digitally.
 
 ## Business Scenario
 
@@ -42,49 +42,33 @@ Some users may join only for a consultation, while others may subscribe to long-
 
 The ER diagram includes the following core entities:
 
-- **User**
-- **TrainerProfile**
-- **ClientProfile**
-- **ProgramPlan**
-- **ClientSubscription**
-- **Payment**
-- **Session**
-- **CheckIn**
-- **ProgressEntry**
-- **TrainerNote**
+- User
+- TrainerProfile
+- ClientProfile
+- ProgramPlan
+- ClientSubscription
+- Payment
+- Session
+- CheckIn
+- ProgressEntry
+- TrainerNote
 
 ## Key Design Decisions
 
-- A common **User** entity is used for shared account details.
-- **TrainerProfile** and **ClientProfile** are separated to avoid mixing role-specific data.
-- **ProgramPlan** stores the coaching plans offered by trainers.
-- **ClientSubscription** tracks which client purchased which plan and for what duration.
-- **Session** is modeled separately from **CheckIn** because consultations and weekly reports are different.
-- **ProgressEntry** stores measurable fitness data like weight and body measurements.
-- **TrainerNote** stores trainer feedback separately for better normalization.
-- **Payment** is linked to subscriptions to support one-time or repeated payments.
-
-## Relationships Covered
-
-The ER diagram supports questions such as:
-
-- Who are the trainers and who are the clients?
-- What coaching plans exist?
-- Which client purchased which plan?
-- When does a plan start and end?
-- Can multiple clients enroll in the same plan?
-- Can one trainer handle many clients?
-- Are consultations being scheduled?
-- Are clients submitting weekly check-ins?
-- How is progress being tracked?
-- How are subscriptions and payments stored?
+- A common **User entity is used for shared account details.
+- TrainerProfile and **ClientProfile are separated to avoid mixing role-specific data.
+- ProgramPlan stores the coaching plans offered by trainers.
+- ClientSubscription tracks which client purchased which plan and for what duration.
+- Session is modeled separately from CheckIn because consultations and weekly reports are different.
+- ProgressEntry stores measurable fitness data like weight and body measurements.
+- TrainerNote stores trainer feedback separately for better normalization.
+- Payment is linked to subscriptions to support one-time or repeated payments. 
 
 ## Files in this Repository
 
 This repository include:
 
-- ER diagram image or PDF
-- Eraser ER diagram code
+- ER diagram image   
 - README documentation
 
 ## Learning Goal
